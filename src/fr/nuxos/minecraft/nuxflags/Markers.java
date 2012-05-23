@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012      Bueno Théo "Munrek"
+ * Copyright (C) 2012      Bueno Thï¿½o "Munrek"
  *
  *  NuxBridge is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -41,10 +41,10 @@ public class Markers {
     	log = plugin.getServer().getLogger();
     	config = plugin.getConfig();
     	serv = plugin.getServer();
-    	InitMarkerSets();
+    	initMarkerSets();
     }
     
-    private void InitMarkerSets() {
+    private void initMarkerSets() {
        log.info("[NuxFlags] Initializing markersets into dynmap");
    	   List<String> MSets = config.getStringList("MarkerSets");
    	   
@@ -58,7 +58,7 @@ public class Markers {
    	    }
     }
 
-	public void AddMarker(Player player, String MarkerSet, String MarkerID, String MarkerLabel) {
+	public void addMarker(Player player, String MarkerSet, String MarkerID, String MarkerLabel) {
 
    		ConfigurationSection cs = config.getConfigurationSection("MarkersConfig." + MarkerSet);
    		String icon = cs.getString("icon");   		
@@ -78,7 +78,7 @@ public class Markers {
 
 	}
 	
-	public void RemoveMarker(Player player, String MarkerSet, String MarkerID) {
+	public void removeMarker(Player player, String MarkerSet, String MarkerID) {
 		
 		PermissionUser user = PermissionsEx.getUser(player);
 		
