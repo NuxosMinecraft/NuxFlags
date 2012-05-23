@@ -1,4 +1,4 @@
 name: NuxFlags
 version: 0.2
 author: Munrek
-main: fr.nuxos-minecraft.nuxflags.NuxFlags
+main: fr.nuxos.minecraft.nuxflags.NuxFlags
