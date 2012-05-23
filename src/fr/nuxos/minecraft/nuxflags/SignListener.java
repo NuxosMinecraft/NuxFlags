@@ -73,22 +73,20 @@ public class SignListener implements Listener {
 
             	if (SignLines[1].isEmpty()){
 
-        			player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You must provide a label at sign's second line.");
-        			event.setCancelled(true);
-        		}            	
+        	player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You must provide a label at sign's second line.");
+        	event.setCancelled(true);
+        	}            	
             	else {
-				
-				if(user.has("nuxflags.add")){
-        		String idpos = "NF_" + event.getBlock().getX() + "-" + event.getBlock().getY() + "-" + event.getBlock().getZ();
-      		    Markerer.AddMarker(player, M, idpos, SignLines[1].replace(" ","_"));
-				}
-				else {
-				player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You can't do that !");
-				event.setCancelled(true);				
-				}
-	
-                }
-    	   }
+		if(user.has("nuxflags.add")){
+        	String idpos = "NF_" + event.getBlock().getX() + "-" + event.getBlock().getY() + "-" + event.getBlock().getZ();
+      		Markerer.addMarker(player, M, idpos, SignLines[1].replace(" ","_"));
+		}
+	    else {
+	    player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You can't do that !");
+	    event.setCancelled(true);				
+	    }
+	 }
+    	}
        }
     }
     
@@ -106,15 +104,14 @@ public class SignListener implements Listener {
         	for (String M : MSets) {
         		
         		if(sign.getLine(0).equalsIgnoreCase("[" + M + "]")) {
-				
-        			if(user.has("nuxflags.remove")){
-            		String idpos = "NF_" + event.getBlock().getX() + "-" + event.getBlock().getY() + "-" + event.getBlock().getZ();
-         		    Markerer.RemoveMarker(player, M, idpos);
-					}
-					else {
-					player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You can't do that !");
-					event.setCancelled(true);
-					}
+			   if(user.has("nuxflags.remove")){
+            		   String idpos = "NF_" + event.getBlock().getX() + "-" + event.getBlock().getY() + "-" + event.getBlock().getZ();
+         		   Markerer.removeMarker(player, M, idpos);
+			   }
+			   else {
+			   player.sendMessage(ChatColor.YELLOW + "[NuxFlags] You can't do that !");
+			   event.setCancelled(true);
+			   }
 
         		}
         	}
