@@ -7,7 +7,7 @@ With NuxFlags you can add personnalized markers for dynmap simply with ingame si
 Installation
 ------------
 
-* First, you need the PermissionsEx (3) plugin ([here](http://dev.bukkit.org/server-mods/permissionsex/)).
+* First, you need the PermissionsEx plugin ([here](http://dev.bukkit.org/server-mods/permissionsex/)).
 * Download the latest jar [here](https://github.com/NuxosMinecraft/NuxFlags/downloads).
 * Copy the downloaded jar file into the plugins folder and rename it to "NuxFlags.jar".
 
@@ -15,6 +15,7 @@ TODO
 ------------
 
 * Add more parameters available to MarkersConfig
+* BUG : If sign is destroyed by gravity, BlockBreakEvent is not called, and marker is not destroyed.
 
 Permission's nodes
 ------------------
