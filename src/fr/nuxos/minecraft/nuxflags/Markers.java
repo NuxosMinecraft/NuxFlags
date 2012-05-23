@@ -47,7 +47,6 @@ public class Markers {
    		PermissionUser user = PermissionsEx.getUser(player);
    		
    		// /dmarker add id:<marker-id> <marker-label> icon:<icon-id> set:<markerset-id>
-   		
    		if(!user.has("dynmap.marker.add")){
    			user.addPermission("dynmap.marker.add");
    	    	log.info("[NuxFlags] Adding marker id : \"dmarker add id:" + MarkerID + " " + MarkerLabel + " icon:" + icon + " set:" + MarkerSet + "\" by " + player.getName());
